@@ -27,3 +27,38 @@ function palindroma() {
 }
 
 palindroma();
+
+//Pari o Dispari?
+
+var yourEvenOrOdd = prompt("Pari o dispari?").toLowerCase();
+console.log("La tua scelta: " + yourEvenOrOdd);
+console.log("Conversione pari e dispari: " + pariDispari(yourEvenOrOdd));
+var number = parseInt(prompt("Inserisci un numero da 1 a 5: "));
+console.log("Numero scelto: " + number);
+var sum = number + randNum();
+console.log("Somma numeri: " + sum);
+console.log("Risultato: " + winner(sum, yourEvenOrOdd));
+
+//blocco funzioni
+
+function pariDispari(str) {
+  if (str == "pari") {
+    return (str = 0);
+  } else {
+    return (str = 1);
+  }
+}
+
+function randNum() {
+  var number = Math.floor(Math.random() * 5) + 1;
+  return number;
+}
+
+function winner(somma, pari_dispari) {
+  var winnerIs = "";
+  if (somma % 2 === pari_dispari) {
+    return (winnerIs = "HAI VINTO");
+  } else {
+    return (winnerIs = "HAI PERSO...");
+  }
+}
