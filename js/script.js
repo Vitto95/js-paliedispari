@@ -1,4 +1,4 @@
-//Palindroma
+/* //Palindroma
 
 //funzione per palindromi
 
@@ -27,7 +27,7 @@ function palindroma() {
 }
 
 palindroma();
-
+ */
 //Pari o Dispari?
 
 var yourEvenOrOdd = prompt("Pari o dispari?").toLowerCase();
@@ -55,10 +55,9 @@ function randNum() {
 }
 
 function winner(somma, pari_dispari) {
-  var winnerIs = "";
   if (somma % 2 === pari_dispari) {
-    return (winnerIs = "HAI VINTO");
+    return "HAI VINTO";
   } else {
-    return (winnerIs = "HAI PERSO...");
+    return "HAI PERSO...";
   }
 }
